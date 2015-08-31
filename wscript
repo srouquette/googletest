@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/usr/bin/env python
 # encoding: utf-8
 
 VERSION='1.0'
@@ -47,6 +47,5 @@ def build(bld):
     if not bld.variant:
         bld.fatal('call "waf build_debug", "waf build_release"\nwaf --help')
 
-    bld.env.BINDIR = 'bin/' + bld.variant
     bld.recurse('googletest')
     bld.recurse('googlemock')

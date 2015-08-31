@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+#!/usr/bin/env python
 # encoding: utf-8
 
 def build(bld):
@@ -8,4 +8,5 @@ def build(bld):
         target='gmock' if bld.variant == 'release' else 'gmockd',
         includes=['.', 'include', '../googletest/include'],
         export_includes=['include'],
+        install_path='lib',
         use='gtest')
